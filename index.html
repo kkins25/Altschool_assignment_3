@@ -9,121 +9,126 @@
 </head>
 <body>
 
+<div class="main">  
+    <!-- Page Header -->
+    <h1 class = "pagetitle"> Welcome to Our Network
+        Service Provider Identifier!
+    </h1>
+    <div>
 
-<!-- Page Header -->
-<h1 class = "pagetitle"> Welcome to Our Network
-     Service Provider Identifier!
-</h1>
-<div>
+    <h2 class="intro">
+        Check Your Phone Number</p>
+        <span id="intro2">To Know Your Network</span>
+    </h2>
+    </div>
 
-<h2 class="intro">
-    Check Your Phone Number</p>
-    <span id="intro2">To Know Your Network</span>
-</h2>
+    <!-- Some text to describe function of the app. -->
+
+
+    <div class="input_container">
+            <form action="#" class="form1">
+                <h2>Full Name</h2>
+
+                <div class="name_details" >
+                    <div>
+                    <input name="firstname" class="inputbox"  type="text" placeholder="Enter First Name" required>
+                    <label for="firstname">First Name</label>
+                    </div>
+                    <div>
+                    <input name="lastname" class="inputbox"  type="text" placeholder="Enter Last Name" required>
+                    <label for="lastname">Last Name</label>
+                    </div>
+                </div>
+                <h2 style="text-align: center; margin-bottom: 5px;">Enter Any Phone number</h2>
+                <hr>
+                
+                <!-- Input fields. we'd restrict it to only nigeria -->
+                <div class="universal">
+                    <label for="phonenumber">Phone Number</label>
+                    <select>
+                    <option value="234" >+234</option>
+                    <option value="233" selected>+233</option>    
+                    </select>
+                    <input type="tel" placeholder="0801234567" name="phonenumber" id="universal" required>
+                </div>
+
+                    <div> 
+                        <button class ="inputbtn" id="check1"> Check Number</button>
+                    </div>
+            
+            </form>
+                        
+            <form action="" class="form2">
+                <div class="mtn">
+                    <label for="phonenumber">MTN Number</label>
+                    <input class ="inputbox" type="tel" name="phonenumber" id="mtn" placeholder="Enter MTN ONLY">
+
+                </div>
+                
+                <div class="airtel">
+                    <label for="phonenumber">Airtel</label>
+                    <input class ="inputbox" type="tel" name="phonenumber" id="airtel" placeholder="Enter Airtel ONLY">
+                </div>
+
+                <div class="etisalat">
+                    <label for="phonenumber">Etisalat</label>
+                    <input class ="inputbox" type="tel" name="phonenumber" id="etisalat" placeholder="Enter Etisalat ONLY">
+                </div>
+                <div class="glo">
+                    <label for="phonenumber">Glo</label>
+                    <input class ="inputbox" type="tel" name="phonenumber" id="glo" placeholder="Enter GLO ONLY">
+                </div>
+                <div> 
+                    <button class ="inputbtn" id="check2"> Check Number</button>
+                </div>
+        
+            </form> 
+    </div>
 </div>
-
-<!-- Some text to describe function of the app. -->
-
-
-<div class="input_container">
-    <form action="#" class="form1">
-        <h2>Full Name</h2>
-
-        <div class="name_details" >
-            <div>
-            <input name="firstname" class="inputbox"  type="text" placeholder="Enter First Name" required>
-            <label for="firstname">First Name</label>
+    <h2 id="meet_team">Meet Our Team</h2>
+     <h4>Meet the great minds that made this piece<span>
+        We are dedicated to making the best of this wonderful oppurtunity
+        provided by   </span> <span is="AltSchool">AltSchool</span>
+   </h4>
+    
+    <div class="team_container">
+            <div class="team">
+                <h3>Cherish</h3>
+                <p>Lorem, ipsum dolor sit
+                    amet consectetur adipisicing elit. 
+                    Minus, veniam.</p>
             </div>
-            <div>
-            <input name="lastname" class="inputbox"  type="text" placeholder="Enter Last Name" required>
-            <label for="lastname">Last Name</label>
+            <div class="team">
+                <h3>Cherish</h3>
+                <p>Lorem, ipsum dolor sit
+                    amet consectetur adipisicing elit. 
+                    Minus, veniam.</p>
             </div>
-        </div>
-        <hr>
-        <!-- Input fields. we'd restrict it to only nigeria -->
-        <div class="universal">
-            <label for="phonenumber">Phone Number</label>
-            <select>
-            <option value="empty" selected></option>  
-            <option value="234" >+234</option>
-            <option value="233">+233</option>    
-            </select>
-            <input type="tel" placeholder="0801234567" name="phonenumber" id="universal" required>
-        </div>
+            <div class="team">
+                <h3>Cherish</h3>
+                <p>Lorem, ipsum dolor sit
+                    amet consectetur adipisicing elit. 
+                    Minus, veniam.</p>
+            </div>
+            <div class="team">
+                <h3>Cherish</h3>
+                <p>Lorem, ipsum dolor sit
+                    amet consectetur adipisicing elit. 
+                    Minus, veniam.</p>
+            </div>
+            <div class="team">
+                <h3>Cherish</h3>
+                <p>Lorem, ipsum dolor sit
+                    amet consectetur adipisicing elit. 
+                    Minus, veniam.</p>
+            </div>
+    </div>
 
-            <div> 
-                <button class ="inputbtn" id="check1"> Check Number</button>
-            </div>
        
-    </form>
-    <h2>Help us check our code. Input your any of your number</h2>
-        
-        <form action="" class="form2">
-        <div class="mtn">
-            <label for="mtn">MTN Number</label>
-            <input class ="inputbox" type="tel" name="mtn" id="mtn">
-
-        </div>
-        
-        <div class="airtel">
-            <label for="airtel">Airtel</label>
-            <input class ="inputbox" type="tel" name="airtel" id="airtel">
-        </div>
-
-        <div class="etisalat">
-            <label for="etisalat">etisalat</label>
-            <input class ="inputbox" type="tel" name="etisalat" id="etisalat">
-        </div>
-        <div class="glo">
-            <label for="etisalat">Glo</label>
-            <input class ="inputbox" type="tel" name="glo" id="glo">
-        </div>
-        <div> 
-            <button class ="inputbtn" id="check2"> Check Number</button>
-        </div>
-   
-    </form> 
-</div>
-
-<h2 id="meet_team">Meet Our Team</h2>
-
-<div class="team_container">
-    <div class="team">
-        <h3>Cherish</h3>
-        <p>Lorem, ipsum dolor sit
-             amet consectetur adipisicing elit. 
-             Minus, veniam.</p>
-    </div>
-    <div class="team">
-        <h3>Cherish</h3>
-        <p>Lorem, ipsum dolor sit
-             amet consectetur adipisicing elit. 
-             Minus, veniam.</p>
-    </div>
-    <div class="team">
-        <h3>Cherish</h3>
-        <p>Lorem, ipsum dolor sit
-             amet consectetur adipisicing elit. 
-             Minus, veniam.</p>
-    </div>
-    <div class="team">
-        <h3>Cherish</h3>
-        <p>Lorem, ipsum dolor sit
-             amet consectetur adipisicing elit. 
-             Minus, veniam.</p>
-    </div>
-    <div class="team">
-        <h3>Cherish</h3>
-        <p>Lorem, ipsum dolor sit
-             amet consectetur adipisicing elit. 
-             Minus, veniam.</p>
-    </div>
+       
 
 
-</div>
-
-
-<footer style="background: blue;">
+<footer>
     Lorem ipsum dolor
      sit amet consectetur adipisicing elit.
       Est, facilis! Lorem ipsum dolor sit 

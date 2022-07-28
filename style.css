@@ -1,0 +1,248 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+.main{
+    
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width:100%;
+    z-index:-1;
+    background-repeat:no-repeat;
+  
+}
+
+  
+
+.pagetitle{
+    
+    text-align: center;
+    padding: 10px;
+    color:white;
+   
+    
+}
+
+.pagetitle .mtn{
+    
+}
+.pagetitle .airtel{
+    
+}
+.pagetitle .etisalat{
+    
+}
+.pagetitle .glo{
+    
+}
+
+
+
+h2.intro{
+    display:block;
+    top:50%;
+    left:35%;
+    color:black;
+    max-width: 100%;
+    padding:10px;
+    text-align: center;
+   
+   
+}
+
+#intro2{
+    
+    
+    color:white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.input_container{
+    
+    display:flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+   justify-content: center;
+}
+.form1 {
+
+    border-radius:10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 400px;
+    margin-right: 40px;
+    /* z-index: 10; */
+    margin-top:5px;
+    box-shadow: 5px 5px 10px 10px  rgba(0, 0, 0, 1);
+    
+  
+
+    
+}
+.form1 .inputbox{
+    width:90%;
+    padding-left:10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top:none;
+    border-left: none;
+    height: 40px;
+    border-radius: 7px;
+    color: #fff;
+    
+}
+
+
+  
+
+.form1 h2{
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color:#fff;
+}
+
+.name_details{
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+   
+
+   
+    
+
+}
+.name_details label{
+    color:#fff;
+    padding-left:6px;
+    padding-top:5px;
+   
+}
+
+.universal{
+    display: flex;
+    margin-top:35px;
+    height: 30px;
+    margin-bottom: 25px;
+  
+  
+    
+}
+
+.universal label{
+    color:#fff;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.universal select{
+    border-radius:5px; 
+    border-top :none;
+    border-left:none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:#fff
+    
+}
+
+.universal #universal{
+width:200px;
+margin-left:5px;
+border-radius:7px;
+padding-left:5px;
+border-top :none;
+border-left:none;
+color: #fff;
+background-color: rgba(0, 0, 0, 0.5);
+
+
+
+}
+
+#check1, #check2{
+    width:100%;
+    font-size: 20px;
+    margin-top: 15px;
+    height:40px;
+    background-color: black;
+    border-radius: 10px;
+    border-top:none;
+    border-left: none;
+    color:#fff;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+
+.form2 {
+    
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 400px;
+    margin-right: 40px;
+    box-shadow: 5px 5px 10px 10px  rgba(0, 0, 0, 1);
+    margin-top:5px;
+    border-radius: 10px;
+    
+}
+
+
+.mtn, .airtel, .etisalat, .glo{
+    margin-top:5px;
+    padding:0 20px;
+    color:#fff;
+    font-size: 15px;
+   
+
+}
+
+#mtn, #airtel, #etisalat, #glo{ 
+    padding:7px;
+    width:100%;
+    height: 40px;
+    border-radius: 7px;
+    color:#fff;
+    border-top:none;
+    border-left: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.team_container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 600px;
+   
+    
+}
+
+#meet_team{
+    text-align: center;
+    font-weight: 700;
+    color:rgb(0, 0, 0);
+    margin-top: 40px;
+    font-size: 50px;
+    margin-bottom: 100px;
+    
+}
+
+.team{
+    margin: 5px;
+    display:block;
+    width: 400px;
+    height:300px;
+    padding: 10px;
+    text-align: center;
+    color:rgb(255, 255, 255);
+    background:rgba(0, 0, 0, 0.952);
+    
+}
+
+footer{
+    background:rgba(0, 0, 0, 1);
+    color :white;
+}
