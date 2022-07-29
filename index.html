@@ -9,7 +9,8 @@
 </head>
 <body>
 
-<div class="main">  
+<div class="main"> 
+
     <!-- Page Header -->
     <h1 class = "pagetitle"> Welcome to Our Network
         Service Provider Identifier!
@@ -24,18 +25,19 @@
 
     <!-- Some text to describe function of the app. -->
 
-
     <div class="input_container">
-            <form action="#" class="form1">
+            <form action="#" class="form1" id="form1" onsubmit="event.preventDefault()">
                 <h2>Full Name</h2>
 
                 <div class="name_details" >
                     <div>
-                    <input name="firstname" class="inputbox"  type="text" placeholder="Enter First Name" required>
+                    <input name="firstname" class="inputbox" onfocus="hideForm()" type="text" 
+                    placeholder="Enter First Name" id ="fname" required>
                     <label for="firstname">First Name</label>
                     </div>
                     <div>
-                    <input name="lastname" class="inputbox"  type="text" placeholder="Enter Last Name" required>
+                    <input name="lastname" class="inputbox" onfocus="hideForm()" type="text"
+                     placeholder="Enter Last Name" id ="lname" required>
                     <label for="lastname">Last Name</label>
                     </div>
                 </div>
@@ -45,79 +47,146 @@
                 <!-- Input fields. we'd restrict it to only nigeria -->
                 <div class="universal">
                     <label for="phonenumber">Phone Number</label>
-                    <select>
-                    <option value="234" >+234</option>
-                    <option value="233" selected>+233</option>    
+                    <select onfocus="hideForm()">
+                    <option value="234" selected>+234</option>   
                     </select>
-                    <input type="tel" placeholder="0801234567" name="phonenumber" id="universal" required>
+                    <input type="tel" onfocus="hideForm()" class= "inputbox" placeholder="0801234567" name="phonenumber" id="universal" required>
                 </div>
 
                     <div> 
-                        <button class ="inputbtn" id="check1"> Check Number</button>
+                        <button type="submit" id="check1"> Check Number</button>
                     </div>
             
             </form>
                         
-            <form action="" class="form2">
+            <form action="" class="form2" id="form2" onsubmit= "event.preventDefault()"">
                 <div class="mtn">
                     <label for="phonenumber">MTN Number</label>
-                    <input class ="inputbox" type="tel" name="phonenumber" id="mtn" placeholder="Enter MTN ONLY">
-
+                    <input class ="inputbox2" type="tel" onfocus="hideForm2()"name="phonenumber" id="mtn" placeholder="Enter MTN ONLY">
                 </div>
                 
                 <div class="airtel">
                     <label for="phonenumber">Airtel</label>
-                    <input class ="inputbox" type="tel" name="phonenumber" id="airtel" placeholder="Enter Airtel ONLY">
+                    <input class ="inputbox2" type="tel" onfocus="hideForm2()" name="phonenumber" id="airtel" placeholder="Enter Airtel ONLY">
                 </div>
 
                 <div class="etisalat">
                     <label for="phonenumber">Etisalat</label>
-                    <input class ="inputbox" type="tel" name="phonenumber" id="etisalat" placeholder="Enter Etisalat ONLY">
+                    <input class ="inputbox2" type="tel" onfocus="hideForm2()" name="phonenumber" id="etisalat" placeholder="Enter Etisalat ONLY">
                 </div>
                 <div class="glo">
                     <label for="phonenumber">Glo</label>
-                    <input class ="inputbox" type="tel" name="phonenumber" id="glo" placeholder="Enter GLO ONLY">
+                    <input class ="inputbox2" type="tel" onfocus="hideForm2()" name="phonenumber" id="glo" placeholder="Enter GLO ONLY">
                 </div>
                 <div> 
-                    <button class ="inputbtn" id="check2"> Check Number</button>
+                    <button class ="submit" id="check2"> Check Number</button>
                 </div>
         
             </form> 
     </div>
 </div>
-    <h2 id="meet_team">Meet Our Team</h2>
-     <h4>Meet the great minds that made this piece<span>
+
+
+<h2 id= "result_header"  style="text-align: center; margin:40px 0;
+font-size: 60px;"> </h2>
+
+<div id="result_container" > 
+<p id="result"> </p>
+<img src="MTN.jpeg" alt="mtn Logo">
+<img src="airtel.png" alt="airtel Logo">
+<img src="GLO.png" alt="glo Logo">
+<img src="Etisalat.png" alt="etisalat Logo">
+
+</div>
+
+
+
+
+
+
+<h2 style=
+        "text-align: center; margin:40px 0;
+        font-size: 60px;" >How to fill in form?</h2>
+<div class="fill_container">
+    <div id="fill_form1">
+        
+        <p><ul>
+            <li> fill in the universal network identifier form </li>
+            <li>Input any mobile number from any network carrier</li>
+            <li>Click <bold>Check Number</bold></li>
+            <li>The interface would change a bit based on the results</li>
+            <li></li>
+        </ul>
+        </p>
+    </div>
+
+   <div id="network_result2">
+    <p><ul>
+        <li> fill in the specific network identifier form </li>
+        <li>Input a mobile number in the appropiate network carrier field</li>
+        <li>Click <bold>Check Number</bold></li>
+        <li>The interface would change a bit based on the results</li>
+        <li></li>
+    </ul>
+    </p>
+   </div>
+</div>
+
+
+
+<!-- Team section -->
+    <h2 id="meet_team" >Meet Our Team</h2>
+     <h3 style= "margin-bottom:50px; text-align:center;">Meet the great minds that made this piece.<span>
         We are dedicated to making the best of this wonderful oppurtunity
-        provided by   </span> <span is="AltSchool">AltSchool</span>
-   </h4>
+        provided by</span> <span is="AltSchool">AltSchool</span>
+   </h3>
     
     <div class="team_container">
             <div class="team">
+                <img src="Cherry.jpg" alt="PHoto of Team lead- Cherish">
                 <h3>Cherish</h3>
                 <p>Lorem, ipsum dolor sit
                     amet consectetur adipisicing elit. 
                     Minus, veniam.</p>
             </div>
             <div class="team">
-                <h3>Cherish</h3>
+            <img src="Kingsley.jpg" alt="Photo of Kingsley">
+                <h3>Kingsley</h3>
                 <p>Lorem, ipsum dolor sit
                     amet consectetur adipisicing elit. 
                     Minus, veniam.</p>
             </div>
             <div class="team">
-                <h3>Cherish</h3>
+                <img src="Blessed.jpg" alt="Photo of photo of Blessed">
+                <h3>Blessed</h3>
                 <p>Lorem, ipsum dolor sit
                     amet consectetur adipisicing elit. 
                     Minus, veniam.</p>
             </div>
             <div class="team">
-                <h3>Cherish</h3>
+                <img src="Bernard.jpg" alt="Photo of Bernard">
+                <h3>Bernard</h3>
                 <p>Lorem, ipsum dolor sit
                     amet consectetur adipisicing elit. 
                     Minus, veniam.</p>
             </div>
             <div class="team">
-                <h3>Cherish</h3>
+                <img src="Gbola.jpg" alt="Photo of Gbola">
+                <h3>Gbola</h3>
+                <p>Lorem, ipsum dolor sit
+                    amet consectetur adipisicing elit. 
+                    Minus, veniam.</p>
+            </div>
+            <div class="team">
+                <img src=".jpg" alt="Photo of David">
+                <h3>Bernard</h3>
+                <p>Lorem, ipsum dolor sit
+                    amet consectetur adipisicing elit. 
+                    Minus, veniam.</p>
+            </div>
+            <div class="team">
+                <img src=".jpg" alt="Photo of Comurule">
+                <h3>Gbola</h3>
                 <p>Lorem, ipsum dolor sit
                     amet consectetur adipisicing elit. 
                     Minus, veniam.</p>
@@ -125,15 +194,13 @@
     </div>
 
        
-       
-
-
+<!-- some contact details.  -->
 <footer>
     Lorem ipsum dolor
      sit amet consectetur adipisicing elit.
       Est, facilis! Lorem ipsum dolor sit 
       amet consectetur adipisicing elit. Amet, magni!
 </footer>
-
+<script src="javascript.js"></script>
 </body>
 </html>

@@ -67,8 +67,11 @@ h2.intro{
     
     display:flex;
     flex-direction: row;
+    flex-wrap:wrap;
     padding-bottom: 50px;
-   justify-content: center;
+    justify-content: center;
+
+   
 }
 .form1 {
 
@@ -77,7 +80,7 @@ h2.intro{
     padding: 20px;
     width: 400px;
     margin-right: 40px;
-    /* z-index: 10; */
+    /* margin-bottom:40px; */
     margin-top:5px;
     box-shadow: 5px 5px 10px 10px  rgba(0, 0, 0, 1);
     
@@ -144,8 +147,10 @@ h2.intro{
     border-top :none;
     border-left:none;
     background-color: rgba(0, 0, 0, 0.5);
-    color:#fff
-    
+    color:#fff;
+    height: 40px;
+    outline: none;
+    cursor:pointer;
 }
 
 .universal #universal{
@@ -173,7 +178,13 @@ background-color: rgba(0, 0, 0, 0.5);
     border-left: none;
     color:#fff;
     background: rgba(0, 0, 0, 0.5);
+    cursor:pointer;
+}
 
+#check1:hover{
+    transform:scale(105%, 115%);
+    background: rgba(165, 85, 38, 0.795);
+    transition:all 800ms;
 }
 
 
@@ -211,14 +222,46 @@ background-color: rgba(0, 0, 0, 0.5);
 }
 
 
-.team_container{
+.fill_container{
     display:flex;
-    flex-direction: row;
+
+}
+
+#fill_form1{
     justify-content: center;
-    height: 600px;
-   
+    flex-wrap:wrap;
+    margin-bottom: 100px;
     
 }
+
+
+.fill_container{
+    display:flex;
+
+}
+
+#fill_form1{
+    justify-content: center;
+    flex-wrap:wrap;
+    margin-bottom: 100px;
+    
+}
+
+
+
+
+
+
+.team_container{
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin-bottom: 100px;
+    
+}
+
+
+
 
 #meet_team{
     text-align: center;
@@ -226,23 +269,32 @@ background-color: rgba(0, 0, 0, 0.5);
     color:rgb(0, 0, 0);
     margin-top: 40px;
     font-size: 50px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     
 }
 
 .team{
     margin: 5px;
     display:block;
-    width: 400px;
+    width: 250px;
     height:300px;
-    padding: 10px;
+    
     text-align: center;
     color:rgb(255, 255, 255);
     background:rgba(0, 0, 0, 0.952);
     
 }
 
+
+.team_container .team  img{
+    height:150px;
+    width:100%;
+
+
+}
+
 footer{
     background:rgba(0, 0, 0, 1);
     color :white;
 }
+
