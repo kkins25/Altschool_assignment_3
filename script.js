@@ -21,6 +21,7 @@ const check2 = document.getElementById('check2');
         function hideForm(){
             let form =document.getElementById('form2');
             form.style.display= 'none';  
+          
         }
  // function to hide first form   
  function hideForm2(){
@@ -30,7 +31,8 @@ const check2 = document.getElementById('check2');
 
  //funtion to display 'hidden' form1
  function displayForm(){
-    form1.style.display= "block"
+    form1.style.display= "block";
+    
  }
 check2.addEventListener("click", displayForm);
 
@@ -40,6 +42,8 @@ check2.addEventListener("click", displayForm);
     form2.style.display= "block"
  }
 check1.addEventListener("click", displayForm2);
+
+// add field to hide other numbers on second form.
 
 
 
@@ -98,8 +102,7 @@ const firstName = document.querySelector('#fname').value;
   console.log(firstName);
  let lastName = document.getElementById('lname');
  let  lname = lastName.value;
- const universal = document.getElementById('universal');
- const uniNum = universal.value;
+ 
  const prefix = document.getElementsByTagName('select');
     const numPrefix = prefix.value;
 const mtn1 = document.getElementById('mtn');
@@ -113,20 +116,45 @@ const etisalat1 = document.getElementById('etisalat');
 
 
 
-//>> check for prefix
+//>> check for prefix 
 function checkForPrefix(){
-    
+    const universal = document.getElementById('universal');
+    let uniNum = universal.value;
+    // console.log(uniNum);
     let uniLength = uniNum.length;
-    if (String.uniLength > 11) {
-    window.alert("remove prefix or cross check number again");
-        return false;
-    }
+    // console.log(uniLength);
+
+// check length of number to ensure its 11. No +234. 
+    if (uniLength > 11 ) {
+// alerts are messing up functionality..
+        alert("please remove +234 or cross check input again");
+    } if (uniLength < 11) {
+        alert("Invalid number. Number less than 11 digits");
+    } else{ 
+// compare first 4 digits of input with mtn numbers in array
+        let first4Num = uniNum.slice(0,4);
+        // console.log(first4Num);
+        const i =0;
+        for (let i = 0; i < mtnNum.length; i++) {
+            if (first4Num === mtnNum[i]){          
+            form1.style.boxShadow="5px 5px 10px 10px yellow";
+            
+            break;
+            }
+// Code test and functional. problem- how to refresh page.   
+                 
+            // console.log(mtnNum[i]);
+        
+}
+}
+
+}
     check1.addEventListener("click", checkForPrefix);
-}  
+
    
 
-    console.log(uniNum);
-window.alert("remove prefix or cross check number again");
+   
+// window.alert("remove prefix or cross check number again");
 
 
     
