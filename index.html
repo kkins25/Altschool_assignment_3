@@ -80,13 +80,13 @@
         <div class="universal">
                 <label for="phonenumber">Phone Number</label>
             <div class="inputandlogo">
-                <input type="tel" class="inputbox" placeholder="0801234567 or +234801234567" name="phonenumber"
+                <input type="tel" class="inputbox" placeholder="0801234567 or +234801234567" name="phonenumber" 
                     id="universal" required>
                 <div class="logo_result">
-                    <img src="./images/network_brands/MTN.jpeg" alt="mtn Logo" height="40px" width="40px" id="mtnLogo">
-                    <img src="./images/network_brands/airtel.png" alt="airtel Logo" height="60px" width="50px" id= "airLogo">
-                    <img src="./images/network_brands/GLO.png" alt="glo Logo" height="30px" width="30px" id="gloLogo">
-                    <img src="./images/network_brands/Etisalat.png" alt="etisalat Logo" height="30px" width="30px" id="etiLogo">
+                    <img src="./images/network_brands/MTN.jpeg" alt="mtn Logo" height="40px" width="40px" id="mtnLogo" style="display: none;">
+                    <img src="./images/network_brands/airtel.png" alt="airtel Logo" height="60px" width="50px" id= "airLogo" style="display: none;">
+                    <img src="./images/network_brands/GLO.png" alt="glo Logo" height="30px" width="30px" id="gloLogo" style="display: none;">
+                    <img src="./images/network_brands/Etisalat.png" alt="etisalat Logo" height="30px" width="30px" id="etiLogo" style="display: none;">
                 </div>
             </div>
         </div>
@@ -106,12 +106,9 @@
         <div class="universal2">
             <label for="phonenumber">Phone Number</label>
             <div class="inputandlogo">
-                <input type="tel" class="inputbox" id ="restricted"pattern= "(0|+234)(809|818|817|909){3} [0-9]{7}" 
+                <input type="tel" class="inputbox" id ="restricted" pattern= "(0|+234)(809|818|817|909)[0-9]{7}" 
                     title ="+234 permissible" placeholder="Enter an Etisalat Number" name="phonenumber">
                 <div class="logo_result">
-                <img src="./images/network_brands/MTN.jpeg" alt="mtn Logo" height="40px" width="40px" id="mtnLogo">
-                <img src="./images/network_brands/airtel.png" alt="airtel Logo" height="50px" width="50px" id= "airLogo">
-                <img src="./images/network_brands/GLO.png" alt="glo Logo" height="30px" width="30px" id="gloLogo">
                 <img src="./images/network_brands/Etisalat.png" alt="etisalat Logo" height="30px" width="30px" id="etiLogo">
                 </div>
             </div>
