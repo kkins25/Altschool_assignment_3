@@ -4,89 +4,208 @@
     margin:0;
 }
 .main{
-    background-image: url("./images/background.jpg");
+    position:relative;
+    background: rgba(0, 0, 0, 0.507) url("./images/background.jpg");
     background-size: cover;
     background-position: center;
-    height: 100%;
+    height: 500px;
     width:100%;
+    flex-shrink: 0;
     z-index:-1;
     background-repeat:no-repeat;
+    background-blend-mode:darken ;
+    
+
 }
+
+nav{
+  
+}
+nav #circlenum{
+    padding:10px;
+    margin-left: 10px;
+    color:#FF5733;
+    font-weight: 700;
+}
+nav #numcirlce{
+    padding:10px;
+    margin-left: 10px;
+    color:#FF5733;
+    font-weight: 700;
+}
+
+
+
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    background:rgba(0, 0, 0, 0.5)
+}
+
+
+.navbar li{
+display:inline-block;
+font-size:20px;
+color:white;
+margin-right:60px;
+padding:8px;
+margin-top: 5px;
+margin-bottom: 5px;
+border-radius: 10px;
+
+}
+
+.navbar ul li:nth-child(2){
+    margin-left: 20px;
+    background:#FF5733;
+    
+}
+
+
 label {
     color:#fff;
     font-size: 17px;
     font-weight: 700;
 }
-.pagetitle{
+
+.introtext{
+    position:absolute;
+    
+    top:35%;
+    width: auto;
+    right:50%;
+    
+    
+}
+    
+.identify{
+
+    position:relative;
     text-align: center;
-    padding: 10px;
-    color:white;
-}
-.pagetitle .mtn{
-    
-}
-.pagetitle .airtel{
-    
-}
-.pagetitle .etisalat{
-    
-}
-.pagetitle .glo{
-    
-}
-h2.intro{
-    display:block;
-    top:50%;
+    font-size: 3.5em;
     left:35%;
-    color:black;
-    max-width: 100%;
-    padding:10px;
-    text-align: center;
+    color:#f7f7f7;
+    width: 400px;
+    text-rendering: geometricPrecision;
+    font-family: Arial, Helvetica, sans-serif;
+   
+} 
+
+
+
+.mobile{
+    position: relative;
+    text-align: right;
+    font-size: 2.5em;
+    left:50%;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    
+ 
+
+
 }
-#intro2{
-    color:white;
-    text-align: center;
-    font-size: 30px;
-    font-weight: 400;
+
+
+
+#getstart{
+    width: 200px;
+    position:relative;
+    font-size:30px;
+    left: 60%;
+    line-height: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+  
 }
-.input_container{
+
+#getstart li{
+ 
+ text-decoration: none;
+ list-style-type: none;
+ font-weight: 700;
+
+ color: rgb(255, 255, 255);
+ padding: 5px;
+ background-color:#ff00dd;
+ 
+ text-align: center;
+ border-radius: 20px 5px 30px 10px;
+}
+    
+#intro1 ul li{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+
+.fill_container{
     display:flex;
-    flex-direction: row;
-    flex-wrap:wrap;
+    flex-direction: column 2;
+    margin-bottom: 50px;
+    justify-content:center;
+    align-items: baseline;
+    align-items: center;
     padding-bottom: 50px;
     justify-content: center;
+    
 
+}
+
+
+
+/* .fill_container img{
+    height: 400px;
+    width: auto;
+   
+
+} */
+
+.formworks{
+
+}
+
+
+.input_container{
    
 }
-.form1 {
+.form1{
     border-radius:10px;
-    background: rgba(0, 0, 0, 0.5);
+    background:#581845;
     padding: 20px;
-    width: 400px;
-    margin-right: 40px;
+    max-width:100% ; 
+    /* margin-right: 40px; */
     /* margin-bottom:40px; */
-    margin-top:5px;
-    box-shadow: 5px 5px 10px 10px  rgba(0, 0, 0, 1);
+    margin-top:50px;
+    box-shadow: 5px 5px 10px 10px  rgba(254, 254, 242, 1);
 }
 .form1 .inputbox{
-    width:90%;
+    width:100%;
     padding-left:10px;
     background-color: rgba(0, 0, 0, 0.5);
-    border-top:none;
-    border-left: none;
+    border:none;
     height: 40px;
     border-radius: 7px;
     color: #fff;
 }
+/* place holder decor */
+
 .form1 h2{
+    width:100%;
     padding-bottom: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color:#fff;
+
+
 }
 .name_details{
     display: flex;
     margin-bottom: 20px;
     justify-content: space-between;
+    width: 100%;
+   
 }
 .name_details label{
     color:#fff;
@@ -94,46 +213,120 @@ h2.intro{
     padding-top:5px;
    
 }
+
+.email{
+    width: 100%;
+    padding-left: 4px;
+    margin-bottom: 20px;
+}
+
+#email{
+
+    width: 90%;
+   
+}
 .universal{
+    
     display: flex;
     margin-top:35px;
     height: 30px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
+
+
 .universal label{
     color:#fff;
     font-size: 17px;
     font-weight: 700;
 }
-.universal select{
+#network{
     border-radius:5px; 
-    border-top :none;
-    border-left:none;
+    border:none;
     background-color: rgba(0, 0, 0, 0.5);
     color:#fff;
-    height: 40px;
-    outline: none;
     cursor:pointer;
+    
 }
+
 .universal #universal{
-width:200px;
-margin-left:5px;
-border-radius:7px;
-padding-left:5px;
-border-top :none;
-border-left:none;
-color: #fff;
-background-color: rgba(0, 0, 0, 0.5);
+    width:60%;
+    margin-left:5px;
+    border-radius:7px;
+    padding-left:5px;
+    border-top :none;
+    border-left:none;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .restricted{
+        margin-top:10px;
+        display:flex;
+    }
+    
+    .restricted_label{
+    
+    
+    }
+    
+    .restricted #restricted{
+        width:60%;
+        margin-left:5px;
+        border-radius:7px;
+        padding-left:5px;
+        border-top :none;
+        border-left:none;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+/*  */
+
+#mtnLogo {
+    position: absolute;
+   
+    background: blue;
+    margin-left: 20px;
+    
 }
-#check1, #check2{
+#etiLogo{
+    position: absolute;
+    margin-left: 20px;
+
+
+}
+#gloLogo{
+    position: absolute;
+    margin-left: 20px;
+
+
+}
+
+#airLogo{
+    position: absolute;
+    margin-left: 20px;
+
+}
+
+
+
+
+.submitbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    
+}
+
+#check1{
     width:100%;
     font-size: 20px;
-    margin-top: 15px;
+    margin-top: 10px;
     height:40px;
     background-color: black;
     border-radius: 10px;
-    border-top:none;
-    border-left: none;
+    border:none;
     color:#fff;
     background: rgba(0, 0, 0, 0.5);
     cursor:pointer;
@@ -143,16 +336,8 @@ background-color: rgba(0, 0, 0, 0.5);
     background: rgba(165, 85, 38, 0.795);
     transition:all 800ms;
 }
-.form2 {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    width: 400px;
-    margin-right: 40px;
-    box-shadow: 5px 5px 10px 10px  rgba(0, 0, 0, 1);
-    margin-top:5px;
-    border-radius: 10px;
-}
-.mtn, .airtel, .etisalat, .glo{
+
+/* /* .mtn, .airtel, .etisalat, .glo{
     margin-top:5px;
     padding:0 20px;
     color:#fff;
@@ -166,20 +351,10 @@ background-color: rgba(0, 0, 0, 0.5);
     color:#fff;
     border-top:none;
     border-left: none;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.fill_container{
-    display:flex;
-}
-#fill_form1{
-    justify-content: center;
-    flex-wrap:wrap;
-    margin-bottom: 100px;
-    
-}
-.fill_container{
-    display:flex;
-}
+    background-color: rgba(0, 0, 0, 0.5); */
+
+
+
 .team_container{
     display:flex;
     justify-content: center;
@@ -192,6 +367,7 @@ background-color: rgba(0, 0, 0, 0.5);
     color:rgb(0, 0, 0);
     margin-top: 40px;
     font-size: 50px;
+    
     /* margin-bottom: 100px; */
     
 }
@@ -200,11 +376,18 @@ background-color: rgba(0, 0, 0, 0.5);
     display:block;
     width: 250px;
     height:300px;
-    
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color:rgb(255, 255, 255);
     background:rgba(0, 0, 0, 0.952);
+    font-size: 20px;
+    
 }
+.team h2{
+    font-family: "Lucida Console", "Courier New", monospace;
+
+}
+
 .team_container .team  img{
     height:150px;
     width:100%;

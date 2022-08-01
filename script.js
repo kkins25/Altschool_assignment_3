@@ -59,9 +59,9 @@ function ServiceProviderChecker() {
 function DOMWorker() {
     const networkColours = {
         "mtn": "#f7eb07",
-        "airtel": "red",
-        "glo": "green",
-        "etisalat": "green"
+        "airtel": "#ed2d2d",
+        "glo": "#249c17",
+        "etisalat": "#799c17"
     }
     const networkSelect = document.getElementById("network");
     const changeNetworkStyle = (networkProvider) => {
@@ -103,10 +103,23 @@ const domInit = () => {
     });
 };
 /**
- * @todo The logo
- * @todo The pattern validation
- * @todo Team background
+ * @todo The logo-- done.  
+ * @todo The pattern validation-- change restriction to Etisalat pattern.
+ * @todo Team background ---- done. 
  * @todo Adjust the team text
+*   teamtext= document.querySelectorAll(".teamtext");
+    teamtext.style.color= "black";
+    teamhead= document.querySelectorAll(".teamhead");
+    teamtext.style.color="black";
+    
+ * 
  * @todo Suggestion Thingy
  * @
  */
+
+
+//  Airtel - rgba (237, 45, 45, 1)
+// glo. 41, 156, 23
+// etisalat. 121, 156, 23
+
+ 
