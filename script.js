@@ -138,7 +138,7 @@ const domInit = () => {
 
  *
  * @todo Suggestion Thingy
- * @
+ * @todo modal for error messages
  */
 
 
