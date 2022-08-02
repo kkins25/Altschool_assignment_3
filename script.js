@@ -90,14 +90,38 @@ function DOMWorker() {
         // Set team background Colour
         document
             .querySelectorAll('.team')
-            .forEach((teamBg) => {
-                teamBg.style.backgroundColor = networkColours[networkProvider] || 'white';
+            .forEach((t) => {
+                t.style.backgroundColor = networkColours[networkProvider] || 'white';
+            });
+
+        // Set the team text
+        document
+            .querySelectorAll(".teamtext")
+            .forEach((t) => {
+                t.style.color = networkColours[networkProvider] || "orange";
+            });
+        document
+            .querySelectorAll(".teamhead")
+            .forEach((t) => {
+                t.style.color = networkColours[networkProvider] || "grey";
             });
     };
+    const alertError = (errorMessage) => {
+        // Add error Message
+        document
+            .getElementById("errorMessage")
+            .innerText = errorMessage;
+
+        // Show Error Element
+        document
+            .getElementById("errorAlert")
+            .style.display = 'block';
+    }
 
     return {
         // networkSelect,
         changeNetworkStyle,
+        alertError,
     }
 };
 const domInit = () => {
@@ -111,15 +135,19 @@ const domInit = () => {
 
         // if (domWorker.networkSelect.value === '') {
         const networkProvider = s.getNetworkProvider(first4Num);
-        if (!networkProvider) alert("We don't have your network. Go and meet Cherish to help you.");
-        else domWorker.changeNetworkStyle(networkProvider);
+        if (!networkProvider) {
+            domWorker.alertError("We don't have your network. Go and meet Cherish to help you.");
+        } else {
+            domWorker.changeNetworkStyle(networkProvider);
+        }
         // } else {
         //     const networkProvider = domWorker.networkSelect.value;
         //     const isValidNumber = s.isNetworkProviderNumber(first4Num, networkProvider);
 
-        //     if (!isValidNumber) alert("Shey we warned you to go and meet Cherish!!!");
+        //     if (!isValidNumber) domWorker.alertError("Shey we warned you to go and meet Cherish!!!");
         // }
     });
+
     document
         .getElementById('form1')
         .addEventListener('reset', (e) => {

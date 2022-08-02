@@ -221,8 +221,7 @@ label {
     width: 400px;
     padding-left:10px;
     padding-top:10px;
-    height: 520px;
-    max-height: 100%;
+    max-height: 620px;
     border-radius:10px;
     background:#fc9134;
     max-width:100%;
@@ -443,3 +442,28 @@ footer{
     background:rgba(0, 0, 0, 1);
     color :white;
 }
+
+/** For the Error Message */
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+  }
+  #errorAlert {
+    display:none;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
