@@ -1,97 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Network Service Identifier</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body onload="domInit()">
-<div class="main">
+    <div class="main">
         <!-- Page Header -->
-        <nav class ="navbar" >
-         <span id="circlenum"><span class="material-symbols-rounded">
-            </span>Circle <span id="numcircle">354</span></span> 
-        <div class="menu"><ul>
-            <li>Register</li>
-            <li>Login</li>
-        </ul>
-        </div>
+        <nav class="navbar">
+            <span id="circlenum"><span class="material-symbols-rounded">
+                </span>Circle <span id="numcircle">354</span></span>
+            <div class="menu">
+                <!-- <ul>
+                    <li>Register</li>
+                    <li>Login</li>
+                </ul> -->
+            </div>
         </nav>
-       <div class="introtext">
-        <h2 class="identify"> 
-            Identify Any</h2>
-          <h2 class="mobile"> 
-              Mobile Network</h2>
-        <ul  id ="getstart">
-            <li><a>Get Started</a> </li></ul>
+        <div class="introtext">
+            <h2 class="identify">
+                Identify Any</h2>
+            <h2 class="mobile">
+                Mobile Network</h2>
+            <ul id="getstart">
+                <li><a>Get Started</a> </li>
+            </ul>
         </div>
-        
-</div> 
+
+    </div>
 
     <!--Form section-->
-    
     <div class="fill_container">
         <div>
-            <img src="images/woman.png" alt="woman"id="woman" >
+            <img src="images/woman.png" alt="woman" id="woman">
         </div>
-    <div class="input_container">
-        <form action="#" class="form1" id="form1" onsubmit="event.preventDefault()">
-            <div class="form_title"><h2 style= "text-align:center; font-size:30px;" >Fill in Details</h2></div>
-        
-            <div class="name_details">
-            <div class="firstname">
-            <input name="firstname" class="inputbox" type="text"
-                    placeholder="Enter First Name" id="fname" required>
-         <label for="firstname">First Name</label>
-            </div>
-            <div class="lastname">
-                <input name="lastname" class="inputbox" type="text"
-                    placeholder="Enter Last Name" id="lname" required>
-                <label for="lastname">Last Name</label>
-            </div>
-            </div>
+        <div class="input_container">
+            <form action="#" class="form1" id="form1" onsubmit="event.preventDefault()">
+                <div class="alert" id="errorAlert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <strong>Alert!  </strong> <span id="errorMessage"></span>
+                </div>
+                <div class="form_title">
+                    <h2 style="text-align:center; font-size:30px;">Fill in Details</h2>
+                </div>
 
-            <div class="email">
+                <div class="name_details">
+                    <div class="firstname">
+                        <input name="firstname" class="inputbox" type="text" placeholder="Enter First Name" id="fname"
+                            required>
+                        <label for="firstname">First Name</label>
+                    </div>
+                    <div class="lastname">
+                        <input name="lastname" class="inputbox" type="text" placeholder="Enter Last Name" id="lname"
+                            required>
+                        <label for="lastname">Last Name</label>
+                    </div>
+                </div>
+
+                <div class="email">
                     <label for="email">Email</label>
-                    <input name="email" class="inputbox" type="email"
-                    placeholder="example@domain.com" id="email" required>
-            </div>
+                    <input name="email" class="inputbox" type="email" placeholder="example@domain.com" id="email"
+                        required>
+                </div>
                 <div class="pword_details">
                     <div class="pword1">
-                        <input name="password" class="inputbox" type="password"
-                            placeholder="Password" id="password" required>
+                        <input name="password" class="inputbox" type="password" placeholder="Password" id="password"
+                            required>
                         <label for="firstname">Password</label>
                     </div>
                     <div class="pword2">
-                        <input name="cpassword" class="inputbox" type="password"
-                            placeholder=" Confirm password" id="cpassword" required>
+                        <input name="cpassword" class="inputbox" type="password" placeholder=" Confirm password"
+                            id="cpassword" required>
                         <label for="lastname">Confirm Password</label>
                     </div>
-                    
-    
                 </div>
-                
-     <!-- Input fields. we'd restrict it to only etisalat -->
-               
-        <div class="universal">
-                <label for="phonenumber">Phone Number</label>
-            <div class="inputandlogo">
-                <input type="tel" class="inputbox" placeholder="0801234567 or +234801234567" name="phonenumber"
-                    id="universal" required>
-                <div class="logo_result">
-                    <img src="./images/network_brands/MTN.jpeg" alt="mtn Logo" height="40px" width="40px" id="mtnLogo">
-                    <img src="./images/network_brands/airtel.png" alt="airtel Logo" height="60px" width="50px" id= "airLogo">
-                    <img src="./images/network_brands/GLO.png" alt="glo Logo" height="30px" width="30px" id="gloLogo">
-                    <img src="./images/network_brands/Etisalat.png" alt="etisalat Logo" height="30px" width="30px" id="etiLogo">
-                </div>
-            </div>
-        </div>
 
-            <!-- <div class="optionalnum">
+                <!-- Input fields. we'd restrict it to only etisalat -->
+
+                <div class="universal">
+                    <label for="phonenumber">Phone Number</label>
+                    <div class="inputandlogo">
+                        <input type="tel" class="inputbox" placeholder="0801234567 or +234801234567" name="phonenumber"
+                            id="universal" required>
+                        <div class="logo_result">
+                            <img src="./images/network_brands/MTN.jpeg" alt="mtn Logo" height="40px" width="40px"
+                                id="mtnLogo" style="display: none;">
+                            <img src="./images/network_brands/airtel.png" alt="airtel Logo" height="60px" width="50px"
+                                id="airLogo" style="display: none;">
+                            <img src="./images/network_brands/GLO.png" alt="glo Logo" height="30px" width="30px"
+                                id="gloLogo" style="display: none;">
+                            <img src="./images/network_brands/Etisalat.png" alt="etisalat Logo" height="30px"
+                                width="30px" id="etiLogo" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="optionalnum">
                  restrict phone number using drop down>>>>>> 
                 <label for="network" >Network Provider (Optional) </label>
                 <select name="network" id="network" title="select network from drop down to restrict input">
@@ -102,38 +113,30 @@
                     <option value="etisalat">ETISALAT</option>
                 </select>
             </div> -->
-                
-        <div class="universal2">
-            <label for="phonenumber">Phone Number</label>
-            <div class="inputandlogo">
-                <input type="tel" class="inputbox" id ="restricted"pattern= "(0|+234)(809|818|817|909){3} [0-9]{7}" 
-                    title ="+234 permissible" placeholder="Enter an Etisalat Number" name="phonenumber">
-                <div class="logo_result">
-                <img src="./images/network_brands/MTN.jpeg" alt="mtn Logo" height="40px" width="40px" id="mtnLogo">
-                <img src="./images/network_brands/airtel.png" alt="airtel Logo" height="50px" width="50px" id= "airLogo">
-                <img src="./images/network_brands/GLO.png" alt="glo Logo" height="30px" width="30px" id="gloLogo">
-                <img src="./images/network_brands/Etisalat.png" alt="etisalat Logo" height="30px" width="30px" id="etiLogo">
+
+                <div class="universal2">
+                    <label for="phonenumber">Phone Number</label>
+                    <div class="inputandlogo">
+                        <input type="tel" class="inputbox" id="restricted" pattern="/(0|+234)(809|818|817|909)[0-9]{7}/"
+                            title="+234 permissible" placeholder="Enter an Etisalat Number" name="phonenumber">
+                        <div class="logo_result">
+                            <img src="./images/network_brands/Etisalat.png" alt="etisalat Logo" height="30px"
+                                width="30px" id="etiLogo">
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+                <div class="submitbtn">
+                    <button type="reset" id="submit">Reset Form</button>
+                </div>
+            </form>
         </div>
-            
-            <div class="submitbtn">
-                <button type="reset" id="submit">Reset Form</button>
-            </div>
-        </form>
     </div>
-</div>
-
-    
-
-    
-    
-
 
     <!-- Team section -->
     <h2 id="meet_team">Meet Our Team</h2>
     <h3 style="margin-bottom:50px; text-align:center;">Meet the great minds that made this piece.<span>
-            We are dedicated to making the best of this wonderful oppurtunity
+            We are dedicated to making the best of this wonderful opportunity
             provided by</span> <span is="AltSchool">AltSchool</span>
     </h3>
 
@@ -147,7 +150,7 @@
         </div>
         <div class="team effect">
             <img src="./images/collaborators/Kingsley.jpg" alt="Photo of Kingsley">
-            <h3 class="teamhead">Kingsley</h3>
+            <h3 class="">Kingsley</h3>
             <p class="teamtext">In the land of myth and a
                 time of magic, the destiny of a great kingdom rests on the shoulders
                 of a young man. His name- Kingsley
@@ -155,14 +158,14 @@
         </div>
         <div class="team effect">
             <img src="./images/collaborators/Blessed.jpg" alt="Photo of Blessed">
-            <h3 class="teamhead">Blessed</h3>
+            <h3 class="">Blessed</h3>
             <p class="teamtext">Lorem, ipsum dolor sit
                 amet consectetur adipisicing elit.
                 Minus, veniam.</p>
         </div>
         <div class="team effect">
             <img src="./images/collaborators/Bernard.jpg" alt="Photo of Bernard">
-            <h3 class="teamhead">Bernard</h3>
+            <h3 class="">Bernard</h3>
             <p class="teamtext">Lorem, ipsum dolor sit
                 amet consectetur adipisicing elit.
                 Minus, veniam.</p>
@@ -176,24 +179,21 @@
         </div>
         <div class="team effect">
             <img src=".jpg" alt="Photo of David">
-            <h3 class="teamhead">Bernard</h3>
+            <h3 class="">Bernard</h3>
             <p class="teamtext">Lorem, ipsum dolor sit
                 amet consectetur adipisicing elit.
                 Minus, veniam.</p>
         </div>
         <div class="team effect">
             <img src=".jpg" alt="Photo of Comurule">
-            <h3 class="teamhead">Gbola</h3>
+            <h3 class="">Comurule</h3>
             <p class="teamtext">Lorem, ipsum dolor sit
                 amet consectetur adipisicing elit.
                 Minus, veniam.</p>
         </div>
     </div>
 
-
     <!-- some contact details.  -->
-
-     
     <footer>
         Lorem ipsum dolor
         sit amet consectetur adipisicing elit.

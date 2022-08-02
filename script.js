@@ -35,7 +35,7 @@ function ServiceProviderChecker() {
     };
     const getFirst4Num = (phoneNumber) => {
         const firstChar = phoneNumber[0];
-        const isLongEnough = firstChar === '+' ? phoneNumber.length >= 7 : phoneNumber.length >= 4;
+        const isLongEnough = firstChar === '+' ? phoneNumber.length >= 8 : phoneNumber.length >= 4;
         const isValiedFirstChar = firstChar === '+' || firstChar === '0';
         if (!isLongEnough || !isValiedFirstChar) return null;
 
@@ -63,22 +63,65 @@ function DOMWorker() {
         "glo": "#249c17",
         "etisalat": "#799c17"
     }
-    const networkSelect = document.getElementById("network");
+    const networkLogoIds = {
+        "mtn": "mtnLogo",
+        "airtel": "airLogo",
+        "glo": "gloLogo",
+        "etisalat": "etiLogo"
+    }
+    // const networkSelect = document.getElementById("network");
     const changeNetworkStyle = (networkProvider) => {
-        const form = document.getElementById('form1');
-        form.style.boxShadow = `5px 5px 10px 10px ${networkColours[networkProvider]}`;
+        // Display logo
+        const networkProviderList = Object.keys(networkLogoIds);
+        networkProviderList.forEach((network) => {
+            let networkLogoElement = document.getElementById(networkLogoIds[network]);
+            if (network === networkProvider) {
+                networkLogoElement.style.display = 'block';
+            } else {
+                networkLogoElement.style.display = 'none';
+            }
+        });
 
-        networkSelect.value = (networkProvider);
+        // Set border Colour
+        document
+            .getElementById('form1')
+            .style.boxShadow = `5px 5px 10px 10px ${networkColours[networkProvider] || 'white'}`;
+
+        // Set team background Colour
         document
             .querySelectorAll('.team')
-            .forEach((teamBg) => {
-                teamBg.style.backgroundColor = networkColours[networkProvider];
+            .forEach((t) => {
+                t.style.backgroundColor = networkColours[networkProvider] || 'white';
+            });
+
+        // Set the team text
+        document
+            .querySelectorAll(".teamtext")
+            .forEach((t) => {
+                t.style.color = networkColours[networkProvider] || "orange";
+            });
+        document
+            .querySelectorAll(".teamhead")
+            .forEach((t) => {
+                t.style.color = networkColours[networkProvider] || "grey";
             });
     };
+    const alertError = (errorMessage) => {
+        // Add error Message
+        document
+            .getElementById("errorMessage")
+            .innerText = errorMessage;
+
+        // Show Error Element
+        document
+            .getElementById("errorAlert")
+            .style.display = 'block';
+    }
 
     return {
-        networkSelect,
+        // networkSelect,
         changeNetworkStyle,
+        alertError,
     }
 };
 const domInit = () => {
@@ -90,31 +133,40 @@ const domInit = () => {
         const first4Num = s.getFirst4Num(phoneNumber);
         if (!first4Num) return;
 
-        if (domWorker.networkSelect.value === '') {
-            const networkProvider = s.getNetworkProvider(first4Num);
-            if (!networkProvider) alert("We don't have your network. Go and meet Cherish to help you.");
-            else domWorker.changeNetworkStyle(networkProvider);
+        // if (domWorker.networkSelect.value === '') {
+        const networkProvider = s.getNetworkProvider(first4Num);
+        if (!networkProvider) {
+            domWorker.alertError("We don't have your network. Go and meet Cherish to help you.");
         } else {
-            const networkProvider = domWorker.networkSelect.value;
-            const isValidNumber = s.isNetworkProviderNumber(first4Num, networkProvider);
-
-            if (!isValidNumber) alert("Shey we warned you to go and meet Cherish!!!");
+            domWorker.changeNetworkStyle(networkProvider);
         }
+        // } else {
+        //     const networkProvider = domWorker.networkSelect.value;
+        //     const isValidNumber = s.isNetworkProviderNumber(first4Num, networkProvider);
+
+        //     if (!isValidNumber) domWorker.alertError("Shey we warned you to go and meet Cherish!!!");
+        // }
     });
+
+    document
+        .getElementById('form1')
+        .addEventListener('reset', (e) => {
+            domWorker.changeNetworkStyle('s');
+        })
 };
 /**
- * @todo The logo-- done.  
+ * @todo The logo-- done.
  * @todo The pattern validation-- change restriction to Etisalat pattern.
- * @todo Team background ---- done. 
+ * @todo Team background ---- done.
  * @todo Adjust the team text
 *   teamtext= document.querySelectorAll(".teamtext");
     teamtext.style.color= "black";
     teamhead= document.querySelectorAll(".teamhead");
     teamtext.style.color="black";
-    
- * 
+
+ *
  * @todo Suggestion Thingy
- * @
+ * @todo modal for error messages
  */
 
 
@@ -122,4 +174,3 @@ const domInit = () => {
 // glo. 41, 156, 23
 // etisalat. 121, 156, 23
 
- 
