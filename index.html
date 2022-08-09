@@ -16,125 +16,122 @@
         <!-- Page Header -->
         <nav class="navbar">
             <span id="circlenum"><span class="material-symbols-rounded">
-                </span>Circle <span id="numcircle">354</span></span>
-            <div class="menu">
-                <!-- <ul>
-                    <li>Register</li>
-                    <li>Login</li>
-                </ul> -->
-            </div>
+                </span>Circle. <span id="numcircle">354</span></span>
         </nav>
-        <div class="introtext">
-            <h2 class="identify">
-                Identify Any</h2>
-            <h2 class="mobile">
-                Mobile Network</h2>
-            <ul id="getstart">
-                <li><a>Get Started</a> </li>
-            </ul>
-        </div>
-
+        
+    <div id="identify">Identify Any</div>
+        <div class="mobile">Mobile Network</div>
+            <button  id="btn">open form</button>
     </div>
 
     <!--Form section-->
-    <div class="fill_container">
-        <div>
-            <img src="images/woman.png" alt="woman" id="woman">
-        </div>
-        <div class="input_container">
-            <form action="#" class="form1" id="form1" onsubmit="event.preventDefault()">
-                <div class="alert" id="errorAlert">
-                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                    <strong>Alert!  </strong> <span id="errorMessage"></span>
-                </div>
-                <div class="form_title">
-                    <h2 style="text-align:center; font-size:30px;">Fill in Details</h2>
-                </div>
+    <div class="section2">
+        <div id= "woman">    </div>
 
-                <div class="name_details">
-                    <div class="firstname">
-                        <input name="firstname" class="inputbox" type="text" placeholder="Enter First Name" id="fname"
-                            required>
-                        <label for="firstname">First Name</label>
-                    </div>
-                    <div class="lastname">
-                        <input name="lastname" class="inputbox" type="text" placeholder="Enter Last Name" id="lname"
-                            required>
-                        <label for="lastname">Last Name</label>
-                    </div>
-                </div>
+    <div class="form_container">
+        <form action="#" class="form1" id="form1" onsubmit="event.preventDefault()" autocomplete = "off">
+            <div class="alert" id="errorAlert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <strong>Alert!  </strong> <span id="errorMessage"></span>
+            </div>
 
-                <div class="email">
-                    <label for="email">Email</label>
-                    <input name="email" class="inputbox" type="email" placeholder="example@domain.com" id="email"
+            <div class="form_title"><span id="fill">Fill i</span>n Detai<span id="fill">ls</span></div>
+
+            <div class="name_details">
+                <div class="firstname">
+                    <input name="firstname" class="inputbox" type="text" placeholder="Enter First Name" id="fname"
                         required>
+                    <label for="firstname">First Name</label>
                 </div>
-                <div class="pword_details">
-                    <div class="pword1">
-                        <input name="password" class="inputbox" type="password" placeholder="Password" id="password"
-                            required>
-                        <label for="firstname">Password</label>
-                    </div>
-                    <div class="pword2">
-                        <input name="cpassword" class="inputbox" type="password" placeholder=" Confirm password"
-                            id="cpassword" required>
-                        <label for="lastname">Confirm Password</label>
-                    </div>
+                <div class="lastname">
+                    <input name="lastname" class="inputbox" type="text" placeholder="Enter Last Name" id="lname"
+                        required>
+                    <label for="lastname">Last Name</label>
                 </div>
+            </div>
 
-                <!-- Input fields. we'd restrict it to only etisalat -->
+            <div class="email">
+                <label for="email">Email</label>
+                <input name="email" class="inputbox" type="email" placeholder="example@domain.com" id="email"
+                    required>
+            </div>
+            <div class="pword_details">
+                <div class="pword1">
+                    <input name="password" class="inputbox" type="password" placeholder="Password" id="password"
+                        required>
+                    <label for="firstname">Password</label>
+                </div>
+                <div class="pword2">
+                    <input name="cpassword" class="inputbox" type="password" placeholder=" Confirm password"
+                        id="cpassword" required>
+                    <label for="lastname">Confirm Password</label>
+                </div>
+            </div>
+            <!-- Input fields. we'd restrict it to only etisalat -->
 
-                <div class="universal">
-                    <label for="phonenumber">Phone Number</label>
-                    <div class="inputandlogo">
-                        <input type="tel" class="inputbox" placeholder="0801234567 or +234801234567" name="phonenumber"
-                            id="universal" required>
-                        <div class="logo_result">
-                            <img src="./images/network_brands/MTN.jpeg" alt="mtn Logo" height="40px" width="40px"
-                                id="mtnLogo" style="display: none;">
-                            <img src="./images/network_brands/airtel.png" alt="airtel Logo" height="60px" width="50px"
-                                id="airLogo" style="display: none;">
-                            <img src="./images/network_brands/GLO.png" alt="glo Logo" height="30px" width="30px"
-                                id="gloLogo" style="display: none;">
-                            <img src="./images/network_brands/Etisalat.png" alt="etisalat Logo" height="30px"
-                                width="30px" id="etiLogo" style="display: none;">
+            <div class="universal">
+                <label for="phonenumber">Phone Number</label>
+                <div class="inputandlogo" >
+                    <input type="tel" class="inputbox" placeholder="0801234567 or +234801234567" name="phonenumber"
+                        id="universal" onkeyup="showSuggestions(this.value)" required>
+                        <div id="suggestion">
+                            <ul>
+                                <li>0808</li>
+                                <li>0808</li>
+                                <li>0808</li>
+                                <li>0808</li>
+                                <li>0808</li>
+                            </ul>
                         </div>
+        
+                    <div class="logo_result">
+                        <img src="./images/network_brands/MTN.jpeg" alt="mtn Logo" height="40px" width="40px"
+                            id="mtnLogo">
+                        <img src="./images/network_brands/airtel.png" alt="airtel Logo" height="60px" width="50px"
+                            id="airLogo">
+                        <img src="./images/network_brands/GLO.png" alt="glo Logo" height="30px" width="30px"
+                            id="gloLogo">
+                        <img src="./images/network_brands/Etisalat.png" alt="etisalat Logo" height="30px"
+                            width="30px" id="etiLogo">
                     </div>
                 </div>
+            </div>
+            
 
-                <!-- <div class="optionalnum">
-                 restrict phone number using drop down>>>>>> 
-                <label for="network" >Network Provider (Optional) </label>
-                <select name="network" id="network" title="select network from drop down to restrict input">
-                    <option value="">----</option>
-                    <option value="mtn">MTN</option>
-                    <option value="airtel">AIRTEL</option>
-                    <option value="glo">GLO</option>
-                    <option value="etisalat">ETISALAT</option>
-                </select>
-            </div> -->
+            <!-- <div class="optionalnum">
+                restrict phone number using drop down>>>>>> 
+            <label for="network" >Network Provider (Optional) </label>
+            <select name="network" id="network" title="select network from drop down to restrict input">
+                <option value="">----</option>
+                <option value="mtn">MTN</option>
+                <option value="airtel">AIRTEL</option>
+                <option value="glo">GLO</option>
+                <option value="etisalat">ETISALAT</option>
+            </select>
+        </div> -->
 
-                <div class="universal2">
-                    <label for="phonenumber">Phone Number</label>
-                    <div class="inputandlogo">
-                        <input type="tel" class="inputbox" id="restricted" pattern="/(0|+234)(809|818|817|909)[0-9]{7}/"
-                            title="+234 permissible" placeholder="Enter an Etisalat Number" name="phonenumber">
-                        <div class="logo_result">
-                            <img src="./images/network_brands/Etisalat.png" alt="etisalat Logo" height="30px"
-                                width="30px" id="etiLogo">
-                        </div>
+            <div class="universal">
+                <label for="phonenumber">Etisalat Number</label>
+                <div class="inputandlogo">
+                    <input type="tel" class="inputbox" id="restricted" pattern="/(0|+234)(809|818|817|909)[0-9]{7}/"
+                        title="+234 permissible" placeholder="Enter an Etisalat Number" name="phonenumber">
+                    <div class="logo_result" >
+                        <img src="./images/network_brands/Etisalat.png" alt="etisalat Logo" height="30px"
+                            width="30px" id="etiLogo">
                     </div>
                 </div>
+            </div>
 
-                <div class="submitbtn">
-                    <button type="reset" id="submit">Reset Form</button>
-                </div>
-            </form>
-        </div>
+            <div class="submitbtn">
+                <button type="reset" id="reset">Reset Form</button>
+            </div>
+        </form>
+    </div>
+
     </div>
 
     <!-- Team section -->
-    <h2 id="meet_team">Meet Our Team</h2>
+    <div id="meet_team">Meet Our Team</div>
     <h3 style="margin-bottom:50px; text-align:center;">Meet the great minds that made this piece.<span>
             We are dedicated to making the best of this wonderful opportunity
             provided by</span> <span is="AltSchool">AltSchool</span>
