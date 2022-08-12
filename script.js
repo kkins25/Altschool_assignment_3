@@ -47,6 +47,17 @@ function ServiceProviderChecker() {
         cleanNum = cleanNum[0] == '0' ? cleanNum : `0${cleanNum}`;
         return cleanNum.slice(0, 4);
     };
+    const getSuggestions = (phoneNumber) => {
+        const networkProviders = Object.keys(networkProviderStore);
+        let suggestedNumbers = [];
+        networkProviders.forEach((network) => {
+            const similarNumbers = networkProviderStore[network].filter(num => num.startsWith(phoneNumber))
+            const presentedSuggestions = similarNumbers.map(num => `${num} - ${network}`);
+            suggestedNumbers = suggestedNumbers.concat(presentedSuggestions);
+        });
+
+        return suggestedNumbers;
+    };
 
     const form = document.getElementById("form1")
 
@@ -54,6 +65,7 @@ function ServiceProviderChecker() {
         getNetworkProvider,
         getFirst4Num,
         isNetworkProviderNumber,
+        getSuggestions,
     }
 };
 function DOMWorker() {
@@ -117,17 +129,29 @@ function DOMWorker() {
             .getElementById("errorAlert")
             .style.display = 'block';
     }
+    const resetForm = () => {
+        // Hide alert Error
+        document
+            .getElementById("errorAlert")
+            .style.display = 'none';
+
+        // Hide Network changes
+        changeNetworkStyle('');
+
+    }
 
     return {
         // networkSelect,
         changeNetworkStyle,
         alertError,
+        resetForm,
     }
 };
 const domInit = () => {
     const domWorker = DOMWorker();
     const phoneNumberInput = document.getElementById("universal");
     phoneNumberInput.addEventListener('input', (e) => {
+        domWorker.resetForm();
         const phoneNumber = e.target.value;
         const s = ServiceProviderChecker();
         const first4Num = s.getFirst4Num(phoneNumber);
@@ -153,6 +177,21 @@ const domInit = () => {
         .addEventListener('reset', (e) => {
             domWorker.changeNetworkStyle('s');
         })
+};
+const showSuggestions = (input) => {
+    document.getElementById('suggestion_list').innerHTML = '';
+    if (input == '') return;
+
+    const s = ServiceProviderChecker();
+    const suggestedNumbers = s.getSuggestions(input);
+    const suggestionHTMLString = suggestedNumbers.map(num => `<li onclick="setPhoneNumber(this.innerText.slice(0,4))">${num}</li>`).join('');
+
+    document.getElementById('suggestion_list').innerHTML = suggestionHTMLString;
+};
+const setPhoneNumber = (phoneNumber) => {
+    document.getElementById("universal").value = phoneNumber;
+    // Hide the suggestion list
+    document.getElementById('suggestion_list').innerHTML = '';
 };
 /**
  * @todo The logo-- done.
