@@ -12,16 +12,21 @@ body{
      
 }
 .main{
-   
+    padding: 10px;
     width:100vw;
     background:rgb(0, 0, 0);
     z-index:100;
 }
 
+.introtext{
+    text-align: center;
+    font-size: 10vw;
+    transition: all 1s ease-in;
+}
 .navbar{
   
   text-align: center;
-  height: 40px;
+  height: 60px;
 }
 
 
@@ -30,7 +35,7 @@ nav #circlenum{
     padding:10px;
     color:#FF5733;
     font-weight: 700;
-    font-size: 5vw;
+    font-size: 50px;
     font-stretch: condensed;
     
 }
@@ -105,7 +110,7 @@ nav #circlenum{
     text-align: center;
     background:rgba(0, 0, 0, 0.3);
     z-index:1;
-}
+} 
 
 #btn:hover{
     border: 1px solid #FF5733;
@@ -216,7 +221,6 @@ nav #circlenum{
 .pword_details .inputbox{
     display:flex;
     width:80%;
-    flex:1 1;
     justify-content: sapce;
 }
 .pword_details .inputbox:first-child{
@@ -237,50 +241,37 @@ nav #circlenum{
    
 }
 
-#suggestion1{
-    display:none;
+#suggestion{
     position:absolute;
-    top:69%;
+    top:65%;
+    max-height: 100px;
     background:#eee;
-    padding:10px;
-    width:inherit;
     border-radius: 5px 5px 10px 10px;
     border-top: 3px solid #e77f07;
-    z-index: 1;
+    z-index: 1; 
     margin-bottom:5px;
-   
-    
+    overflow-y: auto;    
 }
-#suggestion2{
+#suggestion::-webkit-scrollbar{
     display:none;
-    position:absolute;
-    top:85%;
-    background:#eee;
-    padding:10px;
-    width:inherit;
-    border-radius: 5px 5px 10px 10px;
-    border-top: 3px solid #e77f07;
-    z-index: 1;
-    margin-bottom:5px;
-   
+}
+
+
+
+#suggestion_list{
     
-}
 
-#suggestion1 ul, #suggestion2 ul{
-    transition: ease-in all .5s ;
-    box-shadow: #011011 5px 5px 5px;
 }
-
-#suggestion1 ul li, #suggestion2 ul li{
+#suggestion_list li{
+   
     color:rgb(0, 0, 0);
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 200;
     list-style-type: none;
     text-align: center;
     transition: ease-in all  .7s ;
-    border-bottom:1px solid#e77f07;
-    box-shadow: #011011 2px 2px 3px;
     padding:5px;
+    cursor: pointer;
 
 }
 
@@ -309,9 +300,8 @@ nav #circlenum{
 }
 
 .logo_result{
-   
+    
     position: relative;
-    background: blue;
     padding-bottom: 10px;
     width:auto;
     transition: all 700ms ease-in-out;
@@ -322,17 +312,37 @@ nav #circlenum{
 }
 
 .logo_result img{
-    display: flex;
+    display: none;
     position: absolute;
     border-radius: 50%;    
     
 }
 
 
+.submitbtn{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+
+#submit{
+    padding: 10px;
+    margin:5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 10px;
+    border:none;
+    background: rgba(255, 105, 5, 0.993);
+    color:#910332;
+}
+
+
 #reset{
     padding: 10px;
-    position: relative;
-    width:100%;
+    margin:5px;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 700;
@@ -363,6 +373,7 @@ nav #circlenum{
     color:rgb(0, 0, 0);
     margin-top: 40px;
     font-size: 50px;
+    transition: all 1s ease-in;
 }  
     /* margin-bottom: 100px; */
     
@@ -378,6 +389,12 @@ nav #circlenum{
     background: linear-gradient(135deg,#264143,#011011);
     font-size: 20px;
     
+}
+
+img .social{
+    height: 10px;
+    width:10px;
+
 }
 .effect{
     transition: all 300ms;
@@ -395,6 +412,7 @@ border-radius: 50px;
 }
 .team h2{
     font-family: 'poppins';
+    transition: all 1s ease-in;
 
 }
 .team h3{
