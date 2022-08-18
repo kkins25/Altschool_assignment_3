@@ -6,48 +6,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Network Service Identifier</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style2.css"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body onload="domInit()">
     <div class="main">
         <!-- Page Header -->
-        <nav class="navbar">
+        <nav>
+            <div class="navbar">
             <span id="circlenum"><span class="material-symbols-rounded">
                 </span>Circle. <span id="numcircle">354</span></span>
+            </div>
         </nav>
         
     <div id="identify">Identify Any</div>
         <div class="mobile">Mobile Network</div>
             <button  id="btn">open form</button>
     </div>
+    <div class="introtext"><p>
+        Hello! As you fill in the details of the form 
+    </p>
+
+    </div>
 
     <!--Form section-->
     <div class="section2">
-        <div id= "woman">    </div>
+        <div class="woman"><img src="./images/woman.png" alt="photo of woman"> </div>
 
     <div class="form_container">
+       
+            <!-- <img src="/images/woman.png"> -->
+       
         <form action="#" class="form1" id="form1" onsubmit="event.preventDefault()" autocomplete = "off">
             <div class="alert" id="errorAlert">
                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                <strong>Alert!  </strong> <span id="errorMessage"></span>
+                <strong>Alert!</strong> <span id="errorMessage"></span>
             </div>
 
             <div class="form_title"><span id="fill">Fill i</span>n Detai<span id="fill">ls</span></div>
 
             <div class="name_details">
-                <div class="firstname">
-                    <input name="firstname" class="inputbox" type="text" placeholder="Enter First Name" id="fname"
+                <div class="fullname">
+                    <label for="fullname">Full Name</label>
+                    <input name="fullname" class="inputbox" type="text" placeholder="Enter fullname Name" id="fname"
                         required>
+                   
+                </div>
+                <div class="firstname">
                     <label for="firstname">First Name</label>
+                    <input name="firstname" class="inputbox" type="text" placeholder="Enter First Name" id="fullname"
+                        required>
+                   
                 </div>
                 <div class="lastname">
+                    <label for="lastname">Last Name</label>
                     <input name="lastname" class="inputbox" type="text" placeholder="Enter Last Name" id="lname"
                         required>
-                    <label for="lastname">Last Name</label>
+                   
                 </div>
+
             </div>
 
             <div class="email">
@@ -57,14 +76,16 @@
             </div>
             <div class="pword_details">
                 <div class="pword1">
+                    <label for="firstname">Password</label>
                     <input name="password" class="inputbox" type="password" placeholder="Password" id="password"
                         required>
-                    <label for="firstname">Password</label>
+                    
                 </div>
                 <div class="pword2">
+                    <label for="lastname">Confirm Password</label>
                     <input name="cpassword" class="inputbox" type="password" placeholder=" Confirm password"
                         id="cpassword" required>
-                    <label for="lastname">Confirm Password</label>
+                   
                 </div>
             </div>
             <!-- Input fields. we'd restrict it to only etisalat -->
@@ -74,10 +95,11 @@
                 <div class="inputandlogo" >
                     <input type="tel" class="inputbox" placeholder="0801234567 or +234801234567" name="phonenumber"
                         id="universal" onkeyup="showSuggestions(this.value)" required>
+
                         <div id="suggestion">
                             <ul id="suggestion_list"></ul>
                         </div>
-        
+       
                     <div class="logo_result">
                         <img src="./images/network_brands/MTN.jpeg" alt="mtn Logo" height="40px" width="40px"
                             id="mtnLogo">
@@ -89,9 +111,17 @@
                             width="30px" id="etiLogo">
                     </div>
                 </div>
+                <div id="suggestion1">
+                        <ul>
+                            <li>0808</li>
+                            <li>0808</li>
+                            <li>0808</li>
+                            <li>0808</li>
+                            <li>0808</li>
+                        </ul>
+                    </div>
             </div>
             
-
             <!-- <div class="optionalnum">
                 restrict phone number using drop down>>>>>> 
             <label for="network" >Network Provider (Optional) </label>
@@ -102,7 +132,7 @@
                 <option value="glo">GLO</option>
                 <option value="etisalat">ETISALAT</option>
             </select>
-        </div> -->
+            </div> -->
 
             <div class="universal">
                 <label for="phonenumber">Etisalat Number</label>
@@ -113,8 +143,18 @@
                         <img src="./images/network_brands/Etisalat.png" alt="etisalat Logo" height="30px"
                             width="30px" id="etiLogo">
                     </div>
+                    <div id="suggestion2">
+                        <ul>
+                            <li>0808</li>
+                            <li>0808</li>
+                            <li>0808</li>
+                            <li>0808</li>
+                            <li>0808</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            
 
             <div class="submitbtn">
                 <button type="submit" id="submit">Submit Form</button>
