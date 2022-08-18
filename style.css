@@ -8,7 +8,8 @@
 body{
     font-family: sans-serif;
     height: 100vh;
-    width: 100vw;   
+    width:100%;
+     
 }
 .main{
     background: rgba(0, 0, 0, 0.507) url("./images/background.jpg");
@@ -18,7 +19,8 @@ body{
     z-index:-1;
     background-repeat:no-repeat;
     background-blend-mode:darken ;
-    width:100vw;
+    
+    
     
 
 }
@@ -37,7 +39,6 @@ nav #circlenum{
     font-weight: 600;
     font-size: 2vw;
     position: relative;
-  
     bottom:50%;
     text-transform: uppercase;
     padding:5px;
@@ -72,7 +73,7 @@ label {
     font-size: 6vw;
     font-weight: 700;
     margin-bottom: 5px;    
-    z-index:2;
+    z-index:1;
 } 
 
 .mobile{   
@@ -86,7 +87,7 @@ label {
     transform: translate(-50%, -50%);
     font-size: 5vw;
     margin: 5px 0px 10px 0;
-    z-index:2;
+    z-index:1;
 }
 
 
@@ -112,47 +113,49 @@ label {
 
 #btn:hover{
     border: 1px solid #FF5733;
-    box-shadow: 10px 10px 10px   rgba(248, 20, 126, 0.3);
+    box-shadow: 5px -0px 40px rgba(248, 20, 126, 0.3);
+    color: rgba(214, 30, 214, 0.829);
 }
 
     
 
 
 .section2{
-        position:relative;
-        transition: 500ms ease-in;
-        display:flex;
-        flex-wrap: wrap;
-        margin-top: 80px;
-        justify-content: center;
-        margin-bottom: 80px;
-        
-}
-
-#woman{
-    
-   
-   
-    background: url('./images/woman.png') no-repeat center; 
-    height:100%;
-    width: 300px;
-    background-color:blue;  
-   
-}
-
-.form_container{
-    max-width: 450px;
     position:relative;
+    transition: 800ms ease-in;
+    max-width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
+}
+.form_container{
+    position: relative;
+    transition: 500ms ease-in;
+   
+       
+    
+}
+
+
+.section2 img{
+    width:100%;
+    max-width:400px;
+    padding: 10px;
+
+   
    
 }
+
 
 .form1{
-   
-    margin:10px;
-    height:auto;
+    position: relative;
     border-radius: 3px;
     background:#264143;
-    padding: 10px;    
+    padding: 10px; 
+    width:100%; 
+    max-width:400px;
 }
 .form1 label{
     color: #e77f07;
@@ -192,9 +195,6 @@ label {
 .form1 .form_title #fill{
     color:#910332;
 }
-
-
-
 
 .name_details, .pword_details{
     display:flex;
@@ -244,10 +244,11 @@ label {
     top:66%;
     background:#fff;
     padding:10px;
-    width:75%;
+    width:inherit;
     border-radius: 5px 5px 10px 10px;
     border-top: 3px solid #e77f07;
     z-index: 1;
+    margin-bottom:5px;
    
     
 }

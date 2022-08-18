@@ -81,6 +81,11 @@ function DOMWorker() {
                 networkLogoElement.style.display = 'none';
             }
         });
+        
+        // Set Page Header Colour
+        document
+            .getElementById('circlenum')
+            .style.color = networkColours[networkProvider] || '#FF5733';
 
         // Set border Colour
         document
